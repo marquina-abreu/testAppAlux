@@ -1,4 +1,4 @@
-import {Dimensions} from 'react-native';
+import {Dimensions, Platform} from 'react-native';
 import styled from 'styled-components/native';
 import {COLORS_TEST} from './colors';
 
@@ -6,22 +6,22 @@ const typeFont = [
   {
     // regular
     key: 'RE',
-    name: 'MuseoSans-100',
+    name: Platform.OS === 'ios' ? 'MuseoSans-100' : 'MuseoSans_100',
   },
   {
     // semiBold
     key: 'SB',
-    name: 'MuseoSans-500',
+    name: Platform.OS === 'ios' ? 'MuseoSans-500' : 'MuseoSans_500',
   },
   {
     // bold
     key: 'BO',
-    name: 'MuseoSans-700',
+    name: Platform.OS === 'ios' ? 'MuseoSans-700' : 'MuseoSans_700',
   },
   {
     // Medium
     key: 'ME',
-    name: 'MuseoSans-300',
+    name: Platform.OS === 'ios' ? 'MuseoSans-300' : 'MuseoSans_300',
   },
 ];
 
